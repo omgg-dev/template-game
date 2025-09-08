@@ -10,7 +10,7 @@
   <img alt="Technologies Badge" src="https://img.shields.io/badge/Tech-Unity%20Fusion%20C%23-blueviolet">
   <img alt="Code Coverage Badge" src="template-game/CodeCoverage/Report/badge_linecoverage.png">
 
-  <img alt="Workflows Status Badge" src="https://img.shields.io/github/actions/workflow/status/omgg-dev/template-game/game-deploy.yml?label=Build&logo=githubactions">
+  <img alt="Workflows Status Badge" src="https://img.shields.io/github/actions/workflow/status/omgg-dev/template-game/game-builder.yaml?label=Build&logo=githubactions">
   <img alt="Commits Badge" src="https://img.shields.io/github/commit-activity/m/omgg-dev/template-game">
 
   <a href="./LICENSE.md">
