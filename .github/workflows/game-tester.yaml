@@ -93,7 +93,7 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           customImage: ${{ env.dockerImage }}
           checkName: ${{ matrix.targetPlatform }} Test Results
-          coverageOption: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport'
+          coverageOptions: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport'
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
@@ -101,3 +101,10 @@ jobs:
         with:
           name: TestResults-${{ matrix.targetPlatform }}
           path: ${{ steps.tests.outputs.artifactsPath }}
+
+      - name: Code Coverage Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Coverage results for ${{ matrix.targetPlatform }}
+          path: ${{ steps.tests.outputs.coveragePath }}
