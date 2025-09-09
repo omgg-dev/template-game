@@ -77,12 +77,6 @@ $RenameFile = "$RootDir\rename.ps1"
 (Get-Content $RenameFile) -replace $OldName, $NewName | Set-Content $RenameFile
 (Get-Content $RenameFile) -replace "template-game", $NewName | Set-Content $RenameFile
 
-# 6. Renaming $OldName to $NewName in rename.ps1 script
-$RenameFile = "$RootDir\rename.ps1"
-
-(Get-Content $RenameFile) -replace $OldName, $NewName | Set-Content $RenameFile
-(Get-Content $RenameFile) -replace "PACKAGE_NAME", $NewName | Set-Content $RenameFile
-
 # 7. Renaming $OldName to $NewName in README.md
 $ReadmeFile = "$RootDir\README.md"
 
