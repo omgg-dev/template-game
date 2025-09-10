@@ -82,7 +82,6 @@ $ReadmeFile = "$RootDir\README.md"
 
 if (Test-Path $ReadmeFile) {
     (Get-Content $ReadmeFile) -replace $OldName, $NewName | Set-Content $ReadmeFile
-    (Get-Content $ReadmeFile) -replace "PACKAGE_NAME", $NewName | Set-Content $ReadmeFile
 }
 
 Write-Host "Project successfully renamed to $NewName"
